@@ -2,6 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import queryString from 'query-string';
 
+import {
+  Container,
+  TextLinkContainer,
+  StyledLargeText,
+  StyledLink,
+  StyledSmallText
+} from '../styles/StyledComponents.jsx'
+
 class Attendees extends React.Component {
   constructor(props) {
     super(props)
@@ -29,11 +37,17 @@ class Attendees extends React.Component {
 
 
   render() {
-    console.log(this.state)
+    const attendees = this.state.attendees;
+    const waitlist = this.state.waitlist;
+
     return (
-      <div>
-        <h1>Attendees</h1>
-      </div>
+      <Container>
+        <TextLinkContainer>
+          <StyledLargeText>{`Attendees (${attendees.length})`}</StyledLargeText>
+          <StyledLink>See all</StyledLink>
+        </TextLinkContainer>
+        {waitlist ? <StyledSmallText>{`${waitlist.length} on waitlist`}</StyledSmallText> : null}
+      </Container>
     )
   }
 }

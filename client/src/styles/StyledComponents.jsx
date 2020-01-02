@@ -12,7 +12,7 @@ const Roboto = 'Roboto, sans-serif';
 export const Container = withStyles(() => ({
   root: {
     maxWidth: 600,
-    height: 572,
+    height: 530,
     backgroundColor: '#f6f7f8'
   }
 

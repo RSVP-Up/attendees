@@ -16,6 +16,19 @@ const styles = makeStyles(theme => ({
     width: theme.spacing(9),
     height: theme.spacing(9),
   },
+  name: {
+    fontSize: 14,
+    fontWeight: 600
+  },
+  member: {
+    fontSize: 12
+  },
+  text: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    paddingTop: 20
+  }
 }));
 
 const MemberCard = ({ attendees }) => {
@@ -28,6 +41,10 @@ const MemberCard = ({ attendees }) => {
           <CardContent>
             <Grid className={classes.avatar}>
               <Avatar src={member.avatar} className={classes.large} />
+            </Grid>
+            <Grid className={classes.text}>
+              <Typography className={classes.name} align="center">{member.name}</Typography>
+              <Typography className={classes.member}>Member</Typography>
             </Grid>
           </CardContent>
         </StyledCard>

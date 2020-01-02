@@ -3,16 +3,17 @@ import {
   withStyles,
   Grid,
   Typography,
-  Link
+  Link,
+  Card
 } from '@material-ui/core';
 
 const Roboto = 'Roboto, sans-serif';
 
 export const Container = withStyles(() => ({
   root: {
-    border: '#000 solid 1px',
     maxWidth: 600,
     height: 572,
+    backgroundColor: '#f6f7f8'
   }
 
 }))(Grid);
@@ -55,3 +56,25 @@ export const StyledSmallText = withStyles(() => ({
   }
 
 }))(Typography);
+
+export const CardsContainer = withStyles(() => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    padding: 5,
+    justifyContent: 'space-around'
+  }
+
+}))(Grid);
+export const StyledCard = withStyles(() => ({
+  root: {
+    width: 133,
+    height: 202,
+    '&:hover': {
+      boxShadow: '0 0 4px 0 rgba(46,62,72,.12), 0 4px 12px 0 rgba(46,62,72,.12)'
+    },
+    cursor: 'pointer',
+    marginBottom: 16
+  }
+
+}))(Card);

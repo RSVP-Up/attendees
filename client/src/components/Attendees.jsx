@@ -8,7 +8,9 @@ import {
   StyledLargeText,
   StyledLink,
   StyledSmallText
-} from '../styles/StyledComponents.jsx'
+} from '../styles/StyledComponents.jsx';
+
+import MemberCard from './MemberCard.jsx';
 
 class Attendees extends React.Component {
   constructor(props) {
@@ -47,6 +49,7 @@ class Attendees extends React.Component {
           <StyledLink>See all</StyledLink>
         </TextLinkContainer>
         {waitlist ? <StyledSmallText>{`${waitlist.length} on waitlist`}</StyledSmallText> : null}
+        <MemberCard attendees={attendees.splice(0, 8)} />
       </Container>
     )
   }

@@ -25,7 +25,7 @@ class Attendees extends React.Component {
     const value = queryString.parse(window.location.search)
     const id = value.event_id
 
-    axios.get(`http://127.0.0.1:3001/rsvp/${id}`)
+    axios.get(`http://ec2-13-58-208-149.us-east-2.compute.amazonaws.com/rsvp/${id}`)
       .then((members) => {
         this.setState({
           attendees: members.data.attendees,

@@ -9,15 +9,6 @@ import {
 
 const Roboto = 'Roboto, sans-serif';
 
-export const AttendeesContainer = withStyles(() => ({
-  root: {
-    maxWidth: 600,
-    height: 530,
-    backgroundColor: '#f6f7f8'
-  }
-
-}))(Grid);
-
 export const TextLinkContainer = withStyles(() => ({
   root: {
     display: 'flex',

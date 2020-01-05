@@ -2,8 +2,11 @@ import React from 'react';
 import axios from 'axios';
 import queryString from 'query-string';
 
+import Grid from '@material-ui/core/Grid';
+
+import '../styles/styles.css';
+
 import {
-  Container,
   TextLinkContainer,
   StyledLargeText,
   StyledLink,
@@ -43,14 +46,14 @@ class Attendees extends React.Component {
     const waitlist = this.state.waitlist;
 
     return (
-      <Container>
+      <Grid className="attendees-container">
         <TextLinkContainer>
           <StyledLargeText>{`Attendees (${attendees.length})`}</StyledLargeText>
           <StyledLink>See all</StyledLink>
         </TextLinkContainer>
         {waitlist ? <StyledSmallText>{`${waitlist.length} on waitlist`}</StyledSmallText> : null}
         <MemberCard attendees={attendees.splice(0, 8)} />
-      </Container>
+      </Grid>
     )
   }
 }

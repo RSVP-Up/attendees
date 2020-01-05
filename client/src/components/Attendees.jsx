@@ -3,7 +3,7 @@ import axios from 'axios';
 import queryString from 'query-string';
 
 import {
-  Container,
+  AttendeesContainer,
   TextLinkContainer,
   StyledLargeText,
   StyledLink,
@@ -43,14 +43,14 @@ class Attendees extends React.Component {
     const waitlist = this.state.waitlist;
 
     return (
-      <Container>
+      <AttendeesContainer>
         <TextLinkContainer>
           <StyledLargeText>{`Attendees (${attendees.length})`}</StyledLargeText>
           <StyledLink>See all</StyledLink>
         </TextLinkContainer>
         {waitlist ? <StyledSmallText>{`${waitlist.length} on waitlist`}</StyledSmallText> : null}
         <MemberCard attendees={attendees.splice(0, 8)} />
-      </Container>
+      </AttendeesContainer>
     )
   }
 }

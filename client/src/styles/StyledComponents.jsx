@@ -9,7 +9,7 @@ import {
 
 const Roboto = 'Roboto, sans-serif';
 
-export const Container = withStyles(() => ({
+export const AttendeesContainer = withStyles(() => ({
   root: {
     maxWidth: 600,
     height: 530,
